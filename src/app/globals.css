@@ -30,27 +30,39 @@
   --font-mono: 'DM Mono', ui-monospace, monospace;
 }
 
+/* ─── Base ─────────────────────────────────────────────────── */
+
 body {
   background: var(--bg);
   color: var(--slate);
   font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Risk card severity left borders */
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Risk Card Severity Borders ───────────────────────────── */
+
 .risk-high { border-left: 4px solid var(--terracotta); }
 .risk-moderate { border-left: 4px solid var(--amber); }
 .risk-low { border-left: 4px solid var(--sage); }
 
-/* Pulse animation for risk indicators */
+/* ─── Animations ───────────────────────────────────────────── */
+
+/* Subtle pulse on risk severity dots */
 @keyframes risk-pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  50% { opacity: 0.5; }
 }
 .risk-pulse {
-  animation: risk-pulse 2s ease-in-out infinite;
+  animation: risk-pulse 2.5s ease-in-out infinite;
 }
 
-/* Card entrance animation */
+/* Card entrance (used for staggered card animations) */
 @keyframes card-enter {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -62,3 +74,26 @@ body {
 .card-animate:nth-child(1) { animation-delay: 0.1s; }
 .card-animate:nth-child(2) { animation-delay: 0.3s; }
 .card-animate:nth-child(3) { animation-delay: 0.5s; }
+
+/* ─── Selection styling ────────────────────────────────────── */
+
+::selection {
+  background: var(--teal-light);
+  color: var(--slate);
+}
+
+/* ─── Scrollbar (subtle) ───────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--slate);
+}
