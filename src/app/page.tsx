@@ -147,7 +147,7 @@ export default function Home() {
                 See it in action ↓
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/hwin-agent/sdoh-scout"
                 className="font-sans text-sm font-medium text-teal border border-teal px-6 py-3 rounded-[6px] hover:bg-teal-light transition-colors"
               >
                 View on GitHub
@@ -369,7 +369,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center gap-6">
-          <a href="https://github.com" className="font-sans text-sm text-teal hover:underline">
+          <a href="https://github.com/hwin-agent/sdoh-scout" className="font-sans text-sm text-teal hover:underline">
             GitHub
           </a>
           <a href="https://app.promptopinion.ai" className="font-sans text-sm text-teal hover:underline">
