@@ -1,0 +1,101 @@
+{
+  "resources": [
+    {
+      "id": "covenant-house-001",
+      "name": "Covenant House Housing Assistance",
+      "category": "housing",
+      "address": "1234 Main St, Springfield, MO 65801",
+      "lat": 37.2153,
+      "lng": -93.2923,
+      "distance_miles": 2.3,
+      "phone": "(555) 123-4567",
+      "status": "accepting_applications",
+      "eligibility": {
+        "income_threshold": "200% FPL",
+        "requires_dependents": false,
+        "age_range": "18+"
+      },
+      "services": ["Emergency shelter", "Transitional housing", "Case management"],
+      "hours": "Mon-Fri 8am-5pm",
+      "match_risk": "housing_instability"
+    },
+    {
+      "id": "needymeds-rx-002",
+      "name": "NeedyMeds Prescription Assistance",
+      "category": "medication",
+      "address": "Online Program",
+      "lat": null,
+      "lng": null,
+      "distance_miles": null,
+      "phone": "(800) 503-6897",
+      "status": "enrollment_open",
+      "eligibility": {
+        "income_threshold": "400% FPL",
+        "requires_dependents": false,
+        "age_range": "All ages",
+        "insurance_status": "Uninsured or underinsured for Rx"
+      },
+      "services": ["Free/reduced medications", "Copay assistance", "Patient assistance programs"],
+      "hours": "24/7 online",
+      "match_risk": "medication_access"
+    },
+    {
+      "id": "harvest-hope-003",
+      "name": "Harvest Hope Food Pantry",
+      "category": "food",
+      "address": "567 Elm Ave, Springfield, MO 65802",
+      "lat": 37.2089,
+      "lng": -93.2851,
+      "distance_miles": 0.8,
+      "phone": "(555) 987-6543",
+      "status": "open",
+      "eligibility": {
+        "income_threshold": "No restriction",
+        "requires_dependents": false,
+        "age_range": "All ages"
+      },
+      "services": ["Weekly food boxes", "Fresh produce", "Children's nutrition packs"],
+      "hours": "Tue/Thu/Sat 9am-2pm",
+      "match_risk": "food_insecurity"
+    },
+    {
+      "id": "rides-for-health-004",
+      "name": "Rides for Health Transportation",
+      "category": "transportation",
+      "address": "890 Oak Blvd, Springfield, MO 65803",
+      "lat": 37.2210,
+      "lng": -93.2780,
+      "distance_miles": 3.1,
+      "phone": "(555) 456-7890",
+      "status": "accepting_riders",
+      "eligibility": {
+        "income_threshold": "300% FPL",
+        "requires_dependents": false,
+        "age_range": "All ages",
+        "insurance_status": "Medicaid or uninsured"
+      },
+      "services": ["Medical appointment rides", "Pharmacy trips", "Well-child visit transport"],
+      "hours": "Mon-Sat 6am-8pm",
+      "match_risk": "transportation"
+    },
+    {
+      "id": "united-way-005",
+      "name": "United Way Financial Counseling",
+      "category": "financial",
+      "address": "345 Pine St, Springfield, MO 65801",
+      "lat": 37.2120,
+      "lng": -93.2900,
+      "distance_miles": 1.5,
+      "phone": "(555) 211-0000",
+      "status": "accepting_clients",
+      "eligibility": {
+        "income_threshold": "No restriction",
+        "requires_dependents": false,
+        "age_range": "18+"
+      },
+      "services": ["Budget counseling", "Benefits enrollment", "Utility assistance"],
+      "hours": "Mon-Fri 9am-5pm",
+      "match_risk": "financial_strain"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
+@import "tailwindcss";
+
+:root {
+  --teal: #0D6E6E;
+  --teal-light: #E0F2F1;
+  --slate: #3D4F5F;
+  --terracotta: #C75B39;
+  --amber: #D4A017;
+  --sage: #4A7C59;
+  --bg: #FAFAF7;
+  --surface: #F5F0EB;
+  --border: #D4CFC7;
+  --white: #FFFFFF;
+}
+
+@theme inline {
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-slate: var(--slate);
+  --color-terracotta: var(--terracotta);
+  --color-amber: var(--amber);
+  --color-sage: var(--sage);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--slate);
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Risk card severity left borders */
+.risk-high { border-left: 4px solid var(--terracotta); }
+.risk-moderate { border-left: 4px solid var(--amber); }
+.risk-low { border-left: 4px solid var(--sage); }
+
+/* Pulse animation for risk indicators */
+@keyframes risk-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.risk-pulse {
+  animation: risk-pulse 2s ease-in-out infinite;
+}
+
+/* Card entrance animation */
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card-animate {
+  animation: card-enter 0.5s ease-out forwards;
+  opacity: 0;
+}
+.card-animate:nth-child(1) { animation-delay: 0.1s; }
+.card-animate:nth-child(2) { animation-delay: 0.3s; }
+.card-animate:nth-child(3) { animation-delay: 0.5s; }

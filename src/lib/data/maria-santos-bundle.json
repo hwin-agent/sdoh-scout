@@ -1,0 +1,211 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "maria-santos-12345",
+        "name": [{ "given": ["Maria"], "family": "Santos", "use": "official" }],
+        "gender": "female",
+        "birthDate": "1992-03-14",
+        "address": [{
+          "line": ["412 Walnut Creek Rd, Apt 3B"],
+          "city": "Springfield",
+          "state": "MO",
+          "postalCode": "65802",
+          "use": "home"
+        }],
+        "contact": [
+          {
+            "relationship": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v2-0131", "code": "C", "display": "Emergency contact" }] }],
+            "name": { "given": ["Carlos"], "family": "Santos" },
+            "telecom": [{ "system": "phone", "value": "(555) 321-9876" }]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [{ "url": "text", "valueString": "Hispanic or Latino" }]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-z59-001",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "category": [{ "coding": [{ "system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category", "code": "sdoh", "display": "Social Determinants of Health" }] }],
+        "code": { "coding": [{ "system": "http://hl7.org/fhir/sid/icd-10-cm", "code": "Z59.1", "display": "Inadequate housing" }], "text": "Inadequate housing" },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "onsetDateTime": "2025-09-15",
+        "recordedDate": "2025-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-asthma-002",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-category", "code": "encounter-diagnosis" }] }],
+        "code": { "coding": [{ "system": "http://hl7.org/fhir/sid/icd-10-cm", "code": "J45.20", "display": "Mild intermittent asthma, uncomplicated" }], "text": "Mild intermittent asthma" },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "onsetDateTime": "2024-06-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-iron-child-003",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "code": { "coding": [{ "system": "http://hl7.org/fhir/sid/icd-10-cm", "code": "D50.9", "display": "Iron deficiency anemia, unspecified" }], "text": "Iron deficiency anemia (dependent child)" },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "note": [{ "text": "Diagnosed in dependent child (Sofia Santos, age 6) — documented in mother's social history" }],
+        "onsetDateTime": "2026-01-20"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-ed-001",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "EMER", "display": "Emergency" },
+        "type": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "50849002", "display": "Emergency room admission" }] }],
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2026-01-08T02:15:00Z", "end": "2026-01-08T06:30:00Z" },
+        "reasonCode": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "56018004", "display": "Wheezing" }], "text": "Acute wheezing episode" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-ed-002",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "EMER", "display": "Emergency" },
+        "type": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "50849002", "display": "Emergency room admission" }] }],
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2026-01-29T19:45:00Z", "end": "2026-01-30T01:10:00Z" },
+        "reasonCode": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "195967001", "display": "Asthma exacerbation" }], "text": "Asthma exacerbation with shortness of breath" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-ed-003",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "EMER", "display": "Emergency" },
+        "type": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "50849002", "display": "Emergency room admission" }] }],
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2026-02-17T14:20:00Z", "end": "2026-02-17T18:45:00Z" },
+        "reasonCode": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "56018004", "display": "Wheezing" }], "text": "Recurrent wheezing, possible environmental trigger" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-ed-004",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "EMER", "display": "Emergency" },
+        "type": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "50849002", "display": "Emergency room admission" }] }],
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2026-03-10T23:05:00Z", "end": "2026-03-11T03:30:00Z" },
+        "reasonCode": [{ "coding": [{ "system": "http://snomed.info/sct", "code": "195967001", "display": "Asthma exacerbation" }], "text": "Severe asthma exacerbation, nebulizer treatment required" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medrx-albuterol-001",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": { "coding": [{ "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "435", "display": "Albuterol 90 MCG/ACTUAT inhalant solution" }], "text": "Albuterol inhaler" },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "authoredOn": "2025-11-01",
+        "dosageInstruction": [{ "text": "2 puffs every 4-6 hours as needed for wheezing" }],
+        "dispenseRequest": { "numberOfRepeatsAllowed": 6, "quantity": { "value": 1, "unit": "inhaler" } }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "meddisp-albuterol-001",
+        "status": "completed",
+        "medicationCodeableConcept": { "coding": [{ "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "435", "display": "Albuterol inhaler" }] },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "whenHandedOver": "2025-11-05",
+        "quantity": { "value": 1, "unit": "inhaler" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "meddisp-albuterol-002",
+        "status": "completed",
+        "medicationCodeableConcept": { "coding": [{ "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "435", "display": "Albuterol inhaler" }] },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "whenHandedOver": "2025-12-10",
+        "quantity": { "value": 1, "unit": "inhaler" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bmi-001",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs" }] }],
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "39156-5", "display": "Body mass index" }] },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "effectiveDateTime": "2025-09-15",
+        "valueQuantity": { "value": 24.1, "unit": "kg/m2" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bmi-002",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs" }] }],
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "39156-5", "display": "Body mass index" }] },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "effectiveDateTime": "2025-12-10",
+        "valueQuantity": { "value": 22.7, "unit": "kg/m2" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bmi-003",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs" }] }],
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "39156-5", "display": "Body mass index" }] },
+        "subject": { "reference": "Patient/maria-santos-12345" },
+        "effectiveDateTime": "2026-03-10",
+        "valueQuantity": { "value": 21.3, "unit": "kg/m2" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-medicaid-001",
+        "status": "active",
+        "type": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "MCPOL", "display": "Medicaid" }] },
+        "subscriber": { "reference": "Patient/maria-santos-12345" },
+        "beneficiary": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2025-01-01", "end": "2025-12-31" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "cov-medicaid-002",
+        "status": "active",
+        "type": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "MCPOL", "display": "Medicaid" }] },
+        "subscriber": { "reference": "Patient/maria-santos-12345" },
+        "beneficiary": { "reference": "Patient/maria-santos-12345" },
+        "period": { "start": "2026-03-01" },
+        "extension": [{ "url": "http://hl7.org/fhir/StructureDefinition/coverage-gap", "valueString": "Gap in coverage: Jan 1 2026 – Feb 28 2026 (2 months without active Medicaid)" }]
+      }
+    }
+  ]
+}
